@@ -1,0 +1,223 @@
+/* Style CSS Counter */
+
+@font-face {
+	font-family: "Montserrat-UltraLight";
+	src : url("../fonts/Montserrat-UltraLight.otf");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Montserrat-Light";
+	src : url("../fonts/Montserrat-Light.otf");
+	font-weight: normal;
+}
+
+.elementor-widget-wha-counter:not(:last-child) {
+	margin-bottom: 0;
+}
+
+.wha-container-element {
+	position: relative;
+	box-sizing: border-box;
+}
+.wha-counter-container {
+	opacity: 0;
+}
+.wha-counter-container .wha-counter-link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wha-counter-container .wha-counter-box {
+	position: relative;
+	text-align: center;
+}
+
+@media (max-width: 549px) {
+	.wha-counter {
+		width: 100%;
+	}
+}
+
+.wha-counter-container .wha-counter-box {
+	position: relative;
+	overflow: hidden;
+}
+
+.divider-counter {
+	display: flex;
+	justify-content: center;
+}
+.divider-counter span {
+	border: 3px solid silver;
+	display: block;
+	height: 50px;
+}
+
+.wha-counter .wha-icon .wha-wrapper-icon-inner i {
+	color: #91a0ac;
+}
+
+.wha-counter .wha-counter-number .wha-counter-odometer,
+.wha-counter-suffix {
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.wha-counter .wha-inner-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.wha-counter .wha-inner-wrapper.wha-top-text {
+	flex-direction: column-reverse;
+}
+
+.wha-counter .wha-counter-number {
+	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #415361;
+}
+
+.wha-counter .wha-counter-text {
+	color: #91a0ac;
+}
+
+.wha-counter .wha-counter-number .wha-counter-suffix-spacing {
+	margin-left: 10px;
+}
+
+.wha-counter .wha-icon svg {
+	width: 1em;
+	height: 1em;
+	display: block;
+}
+
+
+.wha-counter-box,
+.wha-counter-box::before,
+.wha-counter-box .wha-counter-inner,
+.wha-counter-box .wha-icon,
+.wha-counter-box .wha-icon-inner,
+.wha-counter-box .wha-icon-inner svg,
+.wha-counter-box .wha-counter-number,
+.wha-counter-box .wha-counter-text,
+.wha-counter-box .wha-counter-icon-circle-1,
+.wha-counter-box .wha-counter-icon-circle-2,
+.wha-counter-box .wha-icon-inner i {
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+
+.wha-counter-box::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+}
+.wha-counter-box:hover::before {
+	opacity: 1;
+}
+
+
+/*** Style for preset 1 ***/
+
+.counter-preset1 .wha-counter-box {
+	padding: 40px;
+}
+.counter-preset1 .wha-counter-container .wha-counter-number {
+	position: relative;
+}
+.counter-preset1 .wha-counter-container .wha-counter-text {
+	position: relative;
+}
+
+.counter-preset1 .wha-counter-container .wha-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter-preset1 .wha-counter-container .wha-icon .wha-icon-inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	width: auto;
+	height: auto;
+	background: transparent;
+	padding: 5px;
+}
+
+
+.counter-preset1 .wha-counter-container .wha-counter-box:hover .wrapper-icon-inner {
+	position: absolute;
+}
+
+.counter-preset1 .wha-icon-inner {
+	background-color: #FFFFFF;
+}
+.counter-preset1 .wha-counter-number,
+.counter-preset1 .wha-counter-text {}
+
+.counter-preset1 .wha-counter-number {
+	font-size: 50px;
+	font-family: Montserrat-Light;
+}
+. .wha-counter-text {
+	font-size: 24px;
+	font-family: Montserrat-Light;
+}
+
+/*** End style 1 preset  ***/
+
+
+.wha-container-element .lds-ripple {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+.wha-container-element .lds-ripple div {
+	position: absolute;
+	border: 2px solid #1ada22;
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.wha-container-element .lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+	0% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 0;
+		left: 0;
+		width: 72px;
+		height: 72px;
+		opacity: 0;
+	}
+}
+
